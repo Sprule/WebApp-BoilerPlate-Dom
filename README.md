@@ -5,11 +5,19 @@ This is a starter boilerplate for my web apps using the following technologies.
 ## Frontend
 The following are the technologies used on the frontend and their purpose in the project.
 * **Next.js:** Frontend framework
-  * Folder Routing
-  * Loads environment variables
-  * SSR
+  * [Folder Routing](https://nextjs.org/docs/routing/introduction)
+  * [Env variables support](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
+  * [Pre-rendering Options](https://nextjs.org/docs/basic-features/pages#pre-rendering)
+    * Static Generation (recommended)
+    * Server-Side-Rendering (SSR)
+    * Client-Side-Rendering (CSR)
+  * [Automatic Static Optimization](https://nextjs.org/docs/advanced-features/automatic-static-optimization)
+  * [Image Opmization](https://nextjs.org/docs/basic-features/image-optimization)
   * Babel
+    * [ES6 Features and more](https://nextjs.org/docs/basic-features/supported-browsers-features#javascript-language-features)
   * Webpack
+    * Code-splitting
+  * CI/CD support when hosted with Vercel
 * **Styled Components:** Handles styling for the project
   * Alternative to React JSX and Next.js css modules
   * Supports SaSS, dynamic styling, autogenerates unique class names for styles, componentized styles
@@ -34,10 +42,15 @@ The following are the technologies used on the frontend and their purpose in the
   * Mongoose is a tool to work with MongoDB and supports async/await
 * **Passport.js:** Authentication
   * Username/Password (Local Strategy)
-  * Google Authentication
-* dotenv
+  * Google Authentication Strategy
+* **Helmet.js**: API Security
+* **dotenv**
   * Loads environment variables from .env file into process.env
-* Nodemon
+* **Nodemon**
   *  Auto restarts the backend when files are modified
+
+## Todo
+* Jest or Mocha?
+* Morgan?
 
  
