@@ -28,10 +28,12 @@ The following are the technologies used on the frontend and their purpose in the
   * The main provider for icons throughout the webapp  
 * **Axios:** Promise based HTTP client
   *  Supports making HTTP requests asynchronously with async/await
-* **ESLint + Prettier Configuration:** Auto fixes coding errors and code styling
+* **ESLint + Prettier Configuration:** Auto fixes coding errors with ESLint and enforces uniform code styling with prettier
   * ESLint: Checks for best practices in JS,JSX, & React
   * Prettier: Keeps the projects code format consistent by autofixing code to follow set rules
   * Can be integrated with VSCode to enable formatting on save
+  * ESLint configuration and VS Code settings by [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
+  * [Info on what ESLint-Plugin-Prettier & ESLint-Config-Prettier do](https://stackoverflow.com/a/44690309), [eslint-plugin-prettier repo](https://github.com/prettier/eslint-plugin-prettier), [eslint-config-prettier repo](https://github.com/prettier/eslint-config-prettier)
 
 ## Backend
 * TypeScript
@@ -50,7 +52,29 @@ The following are the technologies used on the frontend and their purpose in the
   *  Auto restarts the backend when files are modified
 
 ## Todo
-* Jest or Mocha?
-* Morgan?
+* [**Jest, Mocha, or Jasmine for testing framework**](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870)
+  * Jest:
+    * Built by react. Therefore best integration with react frontend
+    * Requires extra setup/dependencies to work well in the backend
+    * Built in assertion, spies, and mocks support
+    * Built in code coverage tool
+  * Mocha:
+    * Built for node. Good for the frontend and backend
+    * Requires the most dependencies and setup work, but in this case is the most flexible
+    * Usually paired with Chai for assertion & Sinon for spies, stubs, and mocks
+  * Jasmine:
+    *  Good integration with angular.
+    *  Very mature framework
+* **Morgan:** HTTP request logger middleware for node.js
+  * Purpose?
+  * Specific use cases?
+  * Implementaion complexities?
+* **Docker**
+  * Purpose?
+  * Specific use cases?
+  * Implementaion complexities?
+* **Github Actions or CircleCI**: CI/CD solution
+  * CircleCI more mature. More features and analytics
+  * Github Actions easier integration with github repos and simplifies # of diff 3rd party solutions to work with by housing CI/CD in the same place as the github repo
 
  
