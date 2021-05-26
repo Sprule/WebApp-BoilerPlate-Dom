@@ -2,11 +2,13 @@
 
 This is a starter boilerplate for my web apps using the following technologies.
 
-## Frontend
+## Frontend - Web Folder
 The following are the technologies used on the frontend and their purpose in the project.
+
+### Technologies
 * **Next.js:** Frontend framework
   * [Folder Routing](https://nextjs.org/docs/routing/introduction)
-  * [Env variables support](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
+  * [Env variables support](https://nextjs.org/docs/api-reference/next.config.js/environment-variables) 
   * [Pre-rendering Options](https://nextjs.org/docs/basic-features/pages#pre-rendering)
     * Static Generation (recommended)
     * Server-Side-Rendering (SSR)
@@ -15,8 +17,10 @@ The following are the technologies used on the frontend and their purpose in the
   * [Image Opmization](https://nextjs.org/docs/basic-features/image-optimization)
   * Babel
     * [ES6 Features and more](https://nextjs.org/docs/basic-features/supported-browsers-features#javascript-language-features)
+    * ```.babelrc``` config file for babel
   * Webpack
     * Code-splitting
+  * Hot reload support (Don't need nodemon)
   * CI/CD support when hosted with Vercel
 * **Styled Components:** Handles styling for the project
   * Alternative to React JSX and Next.js css modules
@@ -24,18 +28,27 @@ The following are the technologies used on the frontend and their purpose in the
   * Also handles theme colors for the project using
 * **Material UI:** UI Component library 
   * Uses theme from styled components for the components
+  * ```materialTheme.js``` holds the theme config for material-ui components
 * **FontAwsome Icons for React:** Icon library
   * The main provider for icons throughout the webapp  
 * **Axios:** Promise based HTTP client
   *  Supports making HTTP requests asynchronously with async/await
 * **ESLint + Prettier Configuration:** Auto fixes coding errors with ESLint and enforces uniform code styling with prettier
   * ESLint: Checks for best practices in JS,JSX, & React
+    * ```.eslintrc``` config file for eslint rules
   * Prettier: Keeps the projects code format consistent by autofixing code to follow set rules
+    * ```.prettierignore``` to ignore certain files and folders completely from prettier rules
   * Can be integrated with VSCode to enable formatting on save
   * ESLint configuration and VS Code settings by [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
   * [Info on what ESLint-Plugin-Prettier & ESLint-Config-Prettier do](https://stackoverflow.com/a/44690309), [eslint-plugin-prettier repo](https://github.com/prettier/eslint-plugin-prettier), [eslint-config-prettier repo](https://github.com/prettier/eslint-config-prettier)
+ * [**Moment.js**](https://momentjs.com/): date and time library
+   * Overall makes working with dates in JS easier
+   * Provides a large API for parsing, validating, manipulating, and formatting date/time
 
-## Backend
+## Backend - API Folder
+The following are the technologies used on the backend and their purpose in the project.
+
+### Technologies
 * TypeScript
 * **Node.js/Express:** Backend Framework
   * Creates routes for API
@@ -47,9 +60,14 @@ The following are the technologies used on the frontend and their purpose in the
   * Google Authentication Strategy
 * **Helmet.js**: API Security
 * **dotenv**
-  * Loads environment variables from .env file into process.env
+  * Loads environment variables from ```.env``` file into process.env
 * **Nodemon**
   *  Auto restarts the backend when files are modified
+* [**Moment.js**](https://momentjs.com/): date and time library
+   * Overall makes working with dates in JS easier
+   * Provides a large API for parsing, validating, manipulating, and formatting date/time
+
+## How to run this project
 
 ## Todo
 * [**Jest, Mocha, or Jasmine for testing framework**](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870)
