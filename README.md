@@ -94,5 +94,8 @@ The following are the technologies used on the backend and their purpose in the 
 * **Github Actions or CircleCI**: CI/CD solution
   * CircleCI more mature. More features and analytics
   * Github Actions easier integration with github repos and simplifies # of diff 3rd party solutions to work with by housing CI/CD in the same place as the github repo
+* Look more into security
+  * https://dev.to/meddy672/securing-an-express-application-43m1
+   
 
  
