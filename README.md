@@ -95,8 +95,9 @@ The following are the technologies used on the backend and their purpose in the 
   * CircleCI more mature. More features and analytics
   * Github Actions easier integration with github repos and simplifies # of diff 3rd party solutions to work with by housing CI/CD in the same place as the github repo
 * Look more into security
-  * https://dev.to/meddy672/securing-an-express-application-43m1
-  * https://github.com/WebGoat/WebGoat
+  * [Securing Express API](https://dev.to/meddy672/securing-an-express-application-43m1)
+  * [Security Lessons & hackable website for practice](https://github.com/WebGoat/WebGoat)
+  * [NoSQL Injection. Mongodb](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection)
 * Socket-io: For two-way real-time communication
    
 
