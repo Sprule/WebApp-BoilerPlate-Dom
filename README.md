@@ -68,6 +68,54 @@ The following are the technologies used on the backend and their purpose in the 
    * Provides a large API for parsing, validating, manipulating, and formatting date/time
 
 ## How to run this project
+### First time PreReq Downloads
+* Node.js LTS version from their website (Node.js download comes with npm)
+* Mongodb from their website (optional if you the free online db instead of locally hosting the mongodb)
+* ESLint and Prettier VSCode exstensions
+  * Along with their VSCode settings configuration 
+  ```javascript
+      // These are all my auto-save configs
+    "editor.formatOnSave": true,
+    // disable format on save for js. eslint will do this for us
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    // disable format on save for jsx. eslint will do this for us
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
+    // tell the ESLint plugin to run on save
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    // tell eslint where my files are
+    "eslint.workingDirectories": [
+      "./web",
+      { "mode": "auto" }
+    ],
+    "eslint.validate": [
+      "javascript"
+    ],
+  ```
+  
+### Intial setup
+After you download this project and have it locally. Run 
+```git
+npm i
+```
+inside both the api and web folder in order to install all the necessary packages listed in package.json needed to run this web app.
+
+
+### How to run the Api (backend)
+Make sure you're in the api folder  
+```
+npm run start
+```
+### How to the run the Web (frontend)
+Make sure you're in the web folder  
+```
+npm run dev
+```
 
 ## Todo
 * [**Jest, Mocha, or Jasmine for testing framework**](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870)
