@@ -30,7 +30,8 @@ The following are the technologies used on the frontend and their purpose in the
   * Uses theme from styled components for the components
   * ```materialTheme.js``` holds the theme config for material-ui components
 * **FontAwsome Icons for React:** Icon library
-  * The main provider for icons throughout the webapp  
+  * The main provider for icons throughout the webapp 
+  * Their is a packaage solely for connecting with React. And other packages modularized for what types of icons you want (Brands, Solid, Outline, ...).
 * **Axios:** Promise based HTTP client
   *  Supports making HTTP requests asynchronously with async/await
 * **ESLint + Prettier Configuration:** Auto fixes coding errors with ESLint and enforces uniform code styling with prettier
@@ -40,24 +41,55 @@ The following are the technologies used on the frontend and their purpose in the
     * ```.prettierignore``` to ignore certain files and folders completely from prettier rules
   * Can be integrated with VSCode to enable formatting on save
   * ESLint configuration and VS Code settings by [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
+    * Config slightly changed to ignore JSX rules as this boilerplate mainly uses styled-components for styling.
   * [Info on what ESLint-Plugin-Prettier & ESLint-Config-Prettier do](https://stackoverflow.com/a/44690309), [eslint-plugin-prettier repo](https://github.com/prettier/eslint-plugin-prettier), [eslint-config-prettier repo](https://github.com/prettier/eslint-config-prettier)
  * [**Moment.js**](https://momentjs.com/): date and time library
    * Overall makes working with dates in JS easier
    * Provides a large API for parsing, validating, manipulating, and formatting date/time
+
+### Folder Structure
 
 ## Backend - API Folder
 The following are the technologies used on the backend and their purpose in the project.
 
 ### Technologies
 * TypeScript
+  * `tsconfig.json` for typescript config file
 * **Node.js/Express:** Backend Framework
   * Creates routes for API
+* **Cors:** Enables CORS for express and allows confirguation for CORS. CORS = Cross-Origin Resource Sharing. This package basically lets the api interact with clients on other ips (not just the ip that the api is being hosted on).
 * **MongoDB/Mongoose(Typegoose):** NoSQL Database
   * MongoDB sets up the database
   * Mongoose is a tool to work with MongoDB and supports async/await
 * **Passport.js:** Authentication
   * Username/Password (Local Strategy)
   * Google Authentication Strategy
+* **Bcrypt:** Helps hash passwords. Used with passport.js during signup to hash the password and save it to mongodb. Then during login Bcrypt will compare the given password in the form with the hashed password saved in the db.
+* **Express-session:** Session middleware for Express. Handles the management of sessions. Uses cookies to log sessionID
+  * In CORS on the backend. Set the HTTP header Access-Control-Allow-Credentials value to true to allow receiving and sending cookies by a CORS Request. `credentials: true`
+  * ```javascript
+      const corsMiddleware = cors({
+      origin: CLIENT_URL,
+      credentials: true,
+    })
+    ```
+  * On the frontend. Set the XMLHttpRequest.withCredentials flag to true. We're using axios in this project so...
+  *  ```javascript
+     Axios.defaults.withCredentials = true;
+     ```
+* **connect-mongo:** Mongodb session store that connects with express-session. Sessions created by express-session will be stored into MongoDB automatically when connecting this middleware during the express-session setup.
+  * ```javascript
+    const session = require("express-session");
+    const MongoStore = require("connect-mongo");
+    app.use(
+      session({
+          secret: "super-secret",
+          resave: false,
+          saveUninitialized: true,
+          store: MongoStore.create({ mongoUrl: mongoUrl })
+      })
+    );
+    ```
 * **Helmet.js**: API Security
 * **dotenv**
   * Loads environment variables from ```.env``` file into process.env
@@ -66,6 +98,16 @@ The following are the technologies used on the backend and their purpose in the 
 * [**Moment.js**](https://momentjs.com/): date and time library
    * Overall makes working with dates in JS easier
    * Provides a large API for parsing, validating, manipulating, and formatting date/time
+
+### Folder Structure
+
+## Toolbox
+Other packages that arenn't in this boilerplate, but are my top choices when facing a problem that requires them.
+* **Material-Table:** Large support React table that matches the material-ui look
+* **Socket-io:** For two-way real-time communication
+* **Chart.js:** For simple charts/graphs
+  * Can also try (amcharts)[https://www.amcharts.com/demos/pareto-diagram/]
+* **React-slick**: Carousel with React support
 
 ## How to run this project
 ### First time PreReq Downloads
@@ -117,6 +159,12 @@ Make sure you're in the web folder
 npm run dev
 ```
 
+## Hosting
+Generally I host my websites on DigitalOcean droplets using Nginx. ($5/month)   
+Others options are
+ * vercel which works well with Next.js sites (FREE)
+ * heroku (free)
+
 ## Todo
 * [**Jest, Mocha, or Jasmine for testing framework**](https://medium.com/welldone-software/an-overview-of-javascript-testing-7ce7298b9870)
   * Jest:
@@ -146,7 +194,6 @@ npm run dev
   * [Securing Express API](https://dev.to/meddy672/securing-an-express-application-43m1)
   * [Security Lessons & hackable website for practice](https://github.com/WebGoat/WebGoat)
   * [NoSQL Injection. Mongodb](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection)
-* Socket-io: For two-way real-time communication
    
 
  
