@@ -92,7 +92,13 @@ The following are the technologies used on the backend and their purpose in the 
     ```
 * **Helmet.js**: API Security
 * **dotenv**
-  * Loads environment variables from ```.env``` file into process.env
+  * Loads environment variables from ```.env``` file into process.env. 
+  * example .env file
+  * ```env
+    DB_USERNAME=admin
+    DB_PASSWORD=Dnd4bZtWqGuCWgU51vzbrE6k
+    ```
+  * example calling .env
 * **Nodemon**
   *  Auto restarts the backend when files are modified
 * [**Moment.js**](https://momentjs.com/): date and time library
@@ -141,12 +147,10 @@ Other packages that arenn't in this boilerplate, but are my top choices when fac
   ```
   
 ### Intial setup
-After you download this project and have it locally. Run 
+After you download this project and have it locally. Run the below inside both the api and web folder in order to install all the necessary packages listed in package.json needed to run this web app.
 ```git
 npm i
 ```
-inside both the api and web folder in order to install all the necessary packages listed in package.json needed to run this web app.
-
 
 ### How to run the Api (backend)
 Make sure you're in the api folder  
@@ -194,6 +198,7 @@ Others options are
   * [Securing Express API](https://dev.to/meddy672/securing-an-express-application-43m1)
   * [Security Lessons & hackable website for practice](https://github.com/WebGoat/WebGoat)
   * [NoSQL Injection. Mongodb](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection)
+* **ElasticSearch** integration with MongoDB for fast search component when the dataset becomes large. Most of the time MongoDB indexing will be fast enough for me.
    
 
  
