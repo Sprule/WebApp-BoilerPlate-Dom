@@ -1,24 +1,29 @@
-import '../styles/globals.css'
-import { ThemeProvider } from 'styled-components'
+import Axios from 'axios';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from 'styled-components';
+import Layout from '../components/Layout/Layout';
+import materialTheme from '../material-ui/materialTheme';
+import theme from '../styles/theme';
+import GlobalStyle from '../styles/GlobalStyle';
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
+// Import the CSS
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css' // Import the CSS
-config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
-
-Axios.defaults.baseURL = process.env.API_URL
+Axios.defaults.baseURL = process.env.API_URL;
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
+    <MuiThemeProvider theme={materialTheme}>
+      <ThemeProvider theme={theme}> 
+        <GlobalStyle />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </MuiThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,4 +1,3 @@
-  
 module.exports = {
   extends: ['airbnb', 'prettier'],
   parser: 'babel-eslint',
@@ -68,13 +67,15 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/no-unescaped-entities': 0,
     'jsx-a11y/accessible-emoji': 0,
-    "jsx-a11y/label-has-associated-control": [
-      "error",
+    'jsx-a11y/label-has-associated-control': [
+      'error',
       {
-        "assert": "either"
-      }
+        assert: 'either',
+      },
     ],
     'react/require-default-props': 0,
     'react/jsx-filename-extension': [
@@ -105,7 +106,7 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
-        //below line only for windows users facing CLRF and eslint/prettier error
+        // below line only for windows users facing CLRF and eslint/prettier error
         // non windows users feel free to delete it
         endOfLine: 'auto',
       },
