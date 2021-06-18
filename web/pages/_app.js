@@ -16,7 +16,7 @@ Axios.defaults.baseURL = process.env.API_URL;
 function MyApp({ Component, pageProps }) {
   return (
     <MuiThemeProvider theme={materialTheme}>
-      <ThemeProvider theme={theme}> 
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Layout>
           <Component {...pageProps} />

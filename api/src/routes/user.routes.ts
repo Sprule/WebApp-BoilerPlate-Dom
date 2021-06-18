@@ -1,9 +1,11 @@
 import express from 'express'
+import { UserModel } from '../models/user.model'
 const router = express.Router()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+// GET all Users
+router.get('/', async (req, res, next) => {
+  let users = await UserModel.find().exec()
+  res.json({users})
 });
 
 export default router

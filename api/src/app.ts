@@ -1,6 +1,8 @@
 require('dotenv').config()
 import express from "express";
 import mongoose from "mongoose"
+import cors = require('cors')
+import userRoutes from './routes/user.routes'
 
 export let CLIENT_URL = process.env.PRODUCTION
   ? process.env.CLIENT_URL : 'http://localhost:3000'
@@ -13,15 +15,23 @@ const server = app.listen(PORT, () => {
   console.log('Express server listening on port ' + PORT);
 });
 
+const corsMiddleware = cors({
+  origin: CLIENT_URL,
+})
+app.use(corsMiddleware)
+app.options('*', corsMiddleware)
+
 // express setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // routes
+app.use('/user', userRoutes)
 
 // mongo connection
+const dbName = "example"
 mongoose.set('useFindAndModify', false)
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/off_space';
+const mongoUrl = process.env.MONGO_URL || `mongodb://localhost:27017/${dbName}`;
 console.log('Connecting to mongo at: ', mongoUrl);
 
 mongoose.connect(mongoUrl, { useNewUrlParser: true });
