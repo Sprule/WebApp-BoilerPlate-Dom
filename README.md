@@ -55,12 +55,14 @@ The following are the technologies used on the backend and their purpose in the 
 ### Technologies
 * TypeScript
   * `tsconfig.json` for typescript config file
+  * Type System
 * **Node.js/Express:** Backend Framework
   * Creates routes for API
 * **Cors:** Enables CORS for express and allows confirguation for CORS. CORS = Cross-Origin Resource Sharing. This package basically lets the api interact with clients on other ips (not just the ip that the api is being hosted on).
 * **MongoDB/Mongoose(Typegoose):** NoSQL Database
   * MongoDB sets up the database
   * Mongoose is a tool to work with MongoDB and supports async/await
+  * Typegoose defines Mongoose models using TypeScript Classes
 * **Helmet.js**: API Security
 * **dotenv**
   * Loads environment variables from ```.env``` file into process.env. 
