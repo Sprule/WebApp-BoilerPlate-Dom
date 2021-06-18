@@ -61,35 +61,6 @@ The following are the technologies used on the backend and their purpose in the 
 * **MongoDB/Mongoose(Typegoose):** NoSQL Database
   * MongoDB sets up the database
   * Mongoose is a tool to work with MongoDB and supports async/await
-* **Passport.js:** Authentication
-  * Username/Password (Local Strategy)
-  * Google Authentication Strategy
-* **Bcrypt:** Helps hash passwords. Used with passport.js during signup to hash the password and save it to mongodb. Then during login Bcrypt will compare the given password in the form with the hashed password saved in the db.
-* **Express-session:** Session middleware for Express. Handles the management of sessions. Uses cookies to log sessionID
-  * In CORS on the backend. Set the HTTP header Access-Control-Allow-Credentials value to true to allow receiving and sending cookies by a CORS Request. `credentials: true`
-  * ```javascript
-      const corsMiddleware = cors({
-      origin: CLIENT_URL,
-      credentials: true,
-    })
-    ```
-  * On the frontend. Set the XMLHttpRequest.withCredentials flag to true. We're using axios in this project so...
-  *  ```javascript
-     Axios.defaults.withCredentials = true;
-     ```
-* **connect-mongo:** Mongodb session store that connects with express-session. Sessions created by express-session will be stored into MongoDB automatically when connecting this middleware during the express-session setup.
-  * ```javascript
-    const session = require("express-session");
-    const MongoStore = require("connect-mongo");
-    app.use(
-      session({
-          secret: "super-secret",
-          resave: false,
-          saveUninitialized: true,
-          store: MongoStore.create({ mongoUrl: mongoUrl })
-      })
-    );
-    ```
 * **Helmet.js**: API Security
 * **dotenv**
   * Loads environment variables from ```.env``` file into process.env. 
