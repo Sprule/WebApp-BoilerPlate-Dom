@@ -62,7 +62,7 @@ The following are the technologies used on the backend and their purpose in the 
 * **MongoDB/Mongoose(Typegoose):** NoSQL Database
   * MongoDB sets up the database
   * Mongoose is a tool to work with MongoDB and supports async/await
-  * Typegoose defines Mongoose models using TypeScript Classes
+  * [Typegoose](https://typegoose.github.io/typegoose/) defines Mongoose models using TypeScript Classes
 * **Helmet.js**: API Security
 * **dotenv**
   * Loads environment variables from ```.env``` file into process.env. 
