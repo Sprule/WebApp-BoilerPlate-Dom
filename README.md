@@ -2,8 +2,27 @@
 
 This is a starter boilerplate for my web apps using the following technologies.
 
-## Frontend - Web Folder
-The following are the technologies used on the frontend and their purpose in the project.
+## Table of Contents  
+
+- [Website-BoilerPlate-Dom](#website-boilerplate-dom)
+  * [Frontend](#frontend)
+    + [Technologies](#technologies)
+    + [Folder Structure](#folder-structure)
+  * [Backend](#backend)
+    + [Technologies](#technologies-1)
+    + [Folder Structure](#folder-structure-1)
+  * [Toolbox](#toolbox)
+  * [How to run this project](#how-to-run-this-project)
+    + [First time PreReq Downloads](#first-time-prereq-downloads)
+    + [Intial setup](#intial-setup)
+    + [How to run the Api (backend)](#how-to-run-the-api--backend-)
+    + [How to the run the Web (frontend)](#how-to-the-run-the-web--frontend-)
+  * [Hosting](#hosting)
+  * [Todo](#todo)
+
+
+## Frontend
+The following are the technologies used on the frontend and their purpose in the project. (Web Folder)
 
 ### Technologies
 * **Next.js:** Frontend framework
@@ -49,8 +68,8 @@ The following are the technologies used on the frontend and their purpose in the
 
 ### Folder Structure
 
-## Backend - API Folder
-The following are the technologies used on the backend and their purpose in the project.
+## Backend
+The following are the technologies used on the backend and their purpose in the project. (API Folder)
 
 ### Technologies
 * TypeScript
@@ -172,6 +191,6 @@ Others options are
   * [Security Lessons & hackable website for practice](https://github.com/WebGoat/WebGoat)
   * [NoSQL Injection. Mongodb](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection)
 * **ElasticSearch** integration with MongoDB for fast search component when the dataset becomes large. Most of the time MongoDB indexing will be fast enough for me.
-   
+
 
  
