@@ -1,6 +1,8 @@
 # Website-BoilerPlate-Dom
 
-This is a starter boilerplate for my web apps using the following technologies.
+This is a starter boilerplate for my web apps with the technologies, project setup, and useful packages not in this boilerplate explained.
+
+Implentation explanations, setup, and basic usage of certain technologies can can be read in the [Wiki](https://github.com/Sprule/WebApp-BoilerPlate-Dom/wiki). The wiki is meant to give context on both the purpose of the technology and the setup, while also refreshing the user on how to leverage it inside the project.
 
 ## Table of Contents  
 
@@ -25,7 +27,7 @@ This is a starter boilerplate for my web apps using the following technologies.
 The following are the technologies used on the frontend and their purpose in the project. (Web Folder)
 
 ### Technologies
-* **Next.js:** Frontend framework
+* **Next.js:** Frontend React framework
   * [Folder Routing](https://nextjs.org/docs/routing/introduction)
   * [Env variables support](https://nextjs.org/docs/api-reference/next.config.js/environment-variables) 
   * [Pre-rendering Options](https://nextjs.org/docs/basic-features/pages#pre-rendering)
@@ -52,16 +54,17 @@ The following are the technologies used on the frontend and their purpose in the
   * The main provider for icons throughout the webapp 
   * Their is a packaage solely for connecting with React. And other packages modularized for what types of icons you want (Brands, Solid, Outline, ...).
 * **Axios:** Promise based HTTP client
-  *  Supports making HTTP requests asynchronously with async/await
+  *  Supports making HTTP requests asynchronously with async/await and promises
 * **ESLint + Prettier Configuration:** Auto fixes coding errors with ESLint and enforces uniform code styling with prettier
   * ESLint: Checks for best practices in JS,JSX, & React
     * ```.eslintrc``` config file for eslint rules
   * Prettier: Keeps the projects code format consistent by autofixing code to follow set rules
     * ```.prettierignore``` to ignore certain files and folders completely from prettier rules
-  * Can be integrated with VSCode to enable formatting on save
-  * ESLint configuration and VS Code settings by [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
+  * Can be integrated with VSCode to enable formatting on save. [Set this up](#first-time-prereq-downloads)
+  * ESLint configuration and VS Code settings extended from [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
     * Config slightly changed to ignore JSX rules as this boilerplate mainly uses styled-components for styling.
-  * [Info on what ESLint-Plugin-Prettier & ESLint-Config-Prettier do](https://stackoverflow.com/a/44690309), [eslint-plugin-prettier repo](https://github.com/prettier/eslint-plugin-prettier), [eslint-config-prettier repo](https://github.com/prettier/eslint-config-prettier)
+  * ESLint-Plugin-Prettier & ESLint-Config-Prettier come along with the setup by Wesbos
+    * [Info on what ESLint-Plugin-Prettier & ESLint-Config-Prettier do](https://stackoverflow.com/a/44690309), [eslint-plugin-prettier repo](https://github.com/prettier/eslint-plugin-prettier), [eslint-config-prettier repo](https://github.com/prettier/eslint-config-prettier)
  * [**Moment.js**](https://momentjs.com/): date and time library
    * Overall makes working with dates in JS easier
    * Provides a large API for parsing, validating, manipulating, and formatting date/time
@@ -111,7 +114,7 @@ Other packages that arenn't in this boilerplate, but are my top choices when fac
 ### First time PreReq Downloads
 * Node.js LTS version from their website (Node.js download comes with npm)
 * Mongodb from their website (optional if you the free online db instead of locally hosting the mongodb)
-* ESLint and Prettier VSCode exstensions
+* ESLint and Prettier VSCode exstensions 
   * Along with their VSCode settings configuration 
   ```javascript
       // These are all my auto-save configs
