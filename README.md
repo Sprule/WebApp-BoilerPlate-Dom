@@ -112,10 +112,10 @@ Other packages that arenn't in this boilerplate, but are my top choices when fac
 
 ## How to run this project
 ### First time PreReq Downloads
-* Node.js LTS version from their website (Node.js download comes with npm)
-* Mongodb from their website (optional if you the free online db instead of locally hosting the mongodb)
-* ESLint and Prettier VSCode exstensions 
-  * Along with their VSCode settings configuration 
+* Download Node.js LTS version from their website (Node.js download comes with npm)
+* Download Mongodb from their website (OPTIONAL: You can use the free cloud db instead of locally hosting mongodb. Though the setup of connected the db changes)
+* Download ESLint and Prettier VSCode exstensions 
+  * Paste the following ESLint/Prettier settings into the VSCode settings.json file
   ```javascript
       // These are all my auto-save configs
     "editor.formatOnSave": true,
